@@ -1,0 +1,84 @@
+body {
+	background-color: #0099CC;
+	margin-top: 0px;
+}
+a:link {
+	color: #FF3300;
+	text-decoration: none;
+}
+a:visited {
+	color: #FF3300;
+	text-decoration: none;
+}
+a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+a:active {
+	color: #FF3300;
+	text-decoration: none;
+}
+
+.titSeccion {
+	font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #003399;
+}
+.titOpcion {
+	font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #000000;
+}
+A.titOpcion:link, A.titOpcion:visited, A.titOpcion:active {
+	color: #000000;
+}
+A.titOpcion:hover {
+	color: #FF3300;
+}
+.txtStandard {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+.txtTablas {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+.txtForm {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+.divAyuda {
+	padding-right: 15px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: right;
+}
+.txtBarraSuperior {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+.txtNombreUsuario {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+A.txtBarraSuperior:link, A.txtBarraSuperior:visited, A.txtBarraSuperior:active {
+	color: #FF3300;
+}
+A.txtBarraSuperior:hover {
+	color: #FFFFFF;
+}
+.nroSolicitud {
+
+	font-size: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #000000;
+}

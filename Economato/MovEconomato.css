@@ -1,0 +1,88 @@
+body
+{
+}
+INPUT
+{
+	font-size: 8pt;
+	font-family: verdana, tahoma;
+}
+
+SELECT
+{
+	font-size: 8pt;
+	font-family: verdana, tahoma;
+}
+
+TD
+{
+	font-size: 9pt;
+	font-family: Verdana, Tahoma;
+}
+
+BODY
+{
+	font-size: 9pt;
+	font-family: Verdana, Tahoma;
+}
+
+TABLE
+{
+	font-size: x-small;
+	font-family: Verdana;
+	background-color: #C3D9FF;
+	padding-left: 20px;
+}
+
+TBODY
+{
+	background-color: #E8EEF7;
+}
+
+a
+{
+	
+	color: midnightblue;
+}
+a:hover
+{
+	color: red;
+}
+
+.tituloNota
+{
+	font-size: 14pt;
+	font-family: Arial Black;
+}
+
+.titulo
+{
+	font-size: 18pt;
+	font-family: Verdana, Tahoma;
+}
+
+.subTituloNota
+{
+	font-size: 11pt;
+	font-family: Arial Black;
+}
+.SimpleButton
+{
+	border-right: blue 1px solid;
+	border-top: blue 1px solid;
+	font-weight: bolder;
+	background: khaki;
+	overflow: visible;
+	border-left: blue 1px solid;
+	width: 20px;
+	border-bottom: blue 1px solid;
+	font-family: Verdana;
+}
+
+.Ayuda
+{
+	background-color: LightGoldenrodYellow;
+	font-family:Trebuchet MS,Verdana, Tahoma;
+	font-size:xx-small;
+}
+.Visi { BORDER-RIGHT: lightsteelblue thin solid; BORDER-TOP: lightsteelblue thin solid; LEFT: 3px; BORDER-LEFT: lightsteelblue thin solid; WIDTH: 290px; hEIGHT:290px ; BORDER-BOTTOM: lightsteelblue thin solid; POSITION: absolute; TOP:50px; BACKGROUND-COLOR: #c3d9ff }
+.InVisi { BORDER-RIGHT: lightsteelblue thin solid; BORDER-TOP: lightsteelblue thin solid; LEFT: 3px; VISIBILITY: hidden; BORDER-LEFT: lightsteelblue thin solid; WIDTH: 290px; BORDER-BOTTOM: lightsteelblue thin solid; POSITION: absolute; TOP:40px; BACKGROUND-COLOR: #c3d9ff }

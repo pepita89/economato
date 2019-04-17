@@ -1,0 +1,40 @@
+body
+{
+}
+
+a:link
+{
+	color: #000000;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #000000;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #FF3300;
+	text-decoration: none;
+}
+a:active
+{
+	color: #FFFFFF;
+	background-color:Gray;
+	text-decoration: none;
+}
+
+.n
+{
+	left: 20px;
+	position: relative;
+	font-family: Trebuchet MS;
+	font-size: 11px;
+}
+
+.Cont
+{
+	width:200;
+	height:200;
+	
+	

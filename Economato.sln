@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Economato", "Economato\Economato.vbproj", "{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NegEconomato", "..\..\Workspaces\Área de trabajo\Informatica\Economato\NegEconomato\NegEconomato.vbproj", "{D37827D6-79D7-48A8-AEAF-DC5D3094EF29}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Seguridad", "..\..\Workspaces\Área de trabajo\Informatica\Economato\Seguridad\Seguridad.vbproj", "{E3815112-7DE1-4E9F-A22F-F2DA96C9E4E9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "StockFramework", "..\..\Workspaces\Área de trabajo\Informatica\Economato\StockFramework2005\StockFramework.vbproj", "{365758D0-CAEA-43D2-8626-26CDA6238E17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D37827D6-79D7-48A8-AEAF-DC5D3094EF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D37827D6-79D7-48A8-AEAF-DC5D3094EF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D37827D6-79D7-48A8-AEAF-DC5D3094EF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D37827D6-79D7-48A8-AEAF-DC5D3094EF29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3815112-7DE1-4E9F-A22F-F2DA96C9E4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3815112-7DE1-4E9F-A22F-F2DA96C9E4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3815112-7DE1-4E9F-A22F-F2DA96C9E4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3815112-7DE1-4E9F-A22F-F2DA96C9E4E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{365758D0-CAEA-43D2-8626-26CDA6238E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365758D0-CAEA-43D2-8626-26CDA6238E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365758D0-CAEA-43D2-8626-26CDA6238E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365758D0-CAEA-43D2-8626-26CDA6238E17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20EE8ED0-1FD8-47CD-B1E5-69BEC11279BC}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vmpreproduccion:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = ..\\..\\Workspaces\\Área\u0020de\u0020trabajo\\Informatica\\Economato\\NegEconomato\\NegEconomato.vbproj
+		SccProjectName0 = $/Informatica/Economato/NegEconomato
+		SccAuxPath0 = http://vmpreproduccion:8080/tfs/defaultcollection
+		SccLocalPath0 = ..\\..\\Workspaces\\Área\u0020de\u0020trabajo\\Informatica\\Economato\\NegEconomato
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\..\\Workspaces\\Área\u0020de\u0020trabajo\\Informatica\\Economato\\Seguridad\\Seguridad.vbproj
+		SccProjectName1 = $/Informatica/Economato/Seguridad
+		SccAuxPath1 = http://vmpreproduccion:8080/tfs/defaultcollection
+		SccLocalPath1 = ..\\..\\Workspaces\\Área\u0020de\u0020trabajo\\Informatica\\Economato\\Seguridad
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = ..\\..\\Workspaces\\Área\u0020de\u0020trabajo\\Informatica\\Economato\\StockFramework2005\\StockFramework.vbproj
+		SccProjectName2 = $/Informatica/Economato/StockFramework2005
+		SccAuxPath2 = http://vmpreproduccion:8080/tfs/defaultcollection
+		SccLocalPath2 = ..\\..\\Workspaces\\Área\u0020de\u0020trabajo\\Informatica\\Economato\\StockFramework2005
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

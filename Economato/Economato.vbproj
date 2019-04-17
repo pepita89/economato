@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Economato</RootNamespace>
+    <AssemblyName>Economato</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AdmEconomato.vbproj.vspscc" />
+    <Content Include="AdmEconomato.vssscc" />
+    <Content Include="AdmPlanillasSemanales.aspx" />
+    <Content Include="ArmarOrdenProvParcial.aspx" />
+    <Content Include="calendar-es.js" />
+    <Content Include="calendar-green.css" />
+    <Content Include="calendar-setup.js" />
+    <Content Include="Calendar.aspx" />
+    <Content Include="calendar.js" />
+    <Content Include="CierreFacturasProvisorias.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="dFilter.js" />
+    <Content Include="EgresoMovDeposito.aspx" />
+    <Content Include="EgresoPorDosificacion.aspx" />
+    <Content Include="EgresoPorDosificacionOtros.aspx" />
+    <Content Include="EgresoPorPedidoCocina.aspx" />
+    <Content Include="EgresoPorValeConsumo.aspx" />
+    <Content Include="elementos.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="getPersonas.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IngresoSobrantes2" />
+    <Content Include="mssccprj.scc" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="IngresoCategorias.aspx" />
+    <Content Include="IngresoComprobantes.aspx" />
+    <Content Include="IngresoConfPlanillas.aspx" />
+    <Content Include="IngresoDifInventario.aspx" />
+    <Content Include="IngresoElementos.aspx" />
+    <Content Include="IngresoFacturasProvisorias.aspx" />
+    <Content Include="IngresoMenu.aspx" />
+    <Content Include="IngresoMenuSemanal.aspx" />
+    <Content Include="IngresoOCAbierta.aspx" />
+    <Content Include="IngresoOrdenPedido.aspx" />
+    <Content Include="IngresoOrdenProvision.aspx" />
+    <Content Include="IngresoPedidoDiario.aspx" />
+    <Content Include="IngresoPedidoProv.aspx" />
+    <Content Include="IngresoPlanillaSemanal.aspx" />
+    <Content Include="IngresoProgOtros.aspx" />
+    <Content Include="IngresoProveedores.aspx" />
+    <Content Include="IngresoRemitos.aspx" />
+    <Content Include="IngresoRubros.aspx" />
+    <Content Include="IngresoSectoresUsuarios.aspx" />
+    <Content Include="IngresoSobrantes.aspx" />
+    <Content Include="IngresoSobrantes2.aspx" />
+    <Content Include="IngresoSubCategorias.aspx" />
+    <Content Include="IngresoValeRetiro.aspx" />
+    <Content Include="IngresoVales.aspx" />
+    <Content Include="IngresoValesPre.aspx" />
+    <Content Include="ListAdmPlanillasSem.aspx" />
+    <Content Include="ListadoSobrantes.aspx" />
+    <Content Include="ListadosVarios.aspx" />
+    <Content Include="ListComprobantes.aspx" />
+    <Content Include="ListConfPlanillas.aspx" />
+    <Content Include="ListDifInventario.aspx" />
+    <Content Include="ListEgresosPlanificados.aspx" />
+    <Content Include="ListFacturasProvisorias.aspx" />
+    <Content Include="ListMenues.aspx" />
+    <Content Include="ListOrdenProv.aspx" />
+    <Content Include="ListOrdenProvision.aspx" />
+    <Content Include="ListOrdenProvParcial.aspx" />
+    <Content Include="ListPlanillasSemanales.aspx" />
+    <Content Include="ListProgMenuSemanal.aspx" />
+    <Content Include="ListProgOtrosPedidos.aspx" />
+    <Content Include="ListRemitos.aspx" />
+    <Content Include="ListVales.aspx" />
+    <Content Include="ListValesEntregas.aspx" />
+    <Content Include="ListValesRetiros.aspx" />
+    <Content Include="Login.ascx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MenuAdmCategorias.aspx" />
+    <Content Include="MenuAdministracion.aspx" />
+    <Content Include="MenuAdmOC.aspx" />
+    <Content Include="MenuDeposito.aspx" />
+    <Content Include="MenuEgresos.aspx" />
+    <Content Include="MenuElementos.aspx" />
+    <Content Include="MenuIngresos.aspx" />
+    <Content Include="MenuPrincipal.aspx" />
+    <Content Include="MenuProgConsumos.aspx" />
+    <Content Include="MostrarComprobantes.aspx" />
+    <Content Include="MostrarDosificacion.aspx" />
+    <Content Include="MostrarError.aspx" />
+    <Content Include="MovEconomato.css" />
+    <Content Include="n.gif" />
+    <Content Include="PopUpArticulos.aspx" />
+    <Content Include="PopUpStock.aspx" />
+    <Content Include="Presentacion.aspx" />
+    <Content Include="ReportViewer.dll" />
+    <Content Include="Rubros.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Seguridad.dll" />
+    <Content Include="SelectElemento.ascx" />
+    <Content Include="style.htc" />
+    <Content Include="styles.css" />
+    <Content Include="Toolbar.ascx" />
+    <Content Include="TopPage.ascx" />
+    <Content Include="TVW.css" />
+    <Content Include="TVW.js" />
+    <Content Include="UpgradeLog.htm" />
+    <Content Include="v.gif" />
+    <Content Include="Validador.js" />
+    <Content Include="VerEntregasPorDosifMenu.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmPlanillasSemanales.aspx.vb">
+      <DependentUpon>AdmPlanillasSemanales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ArmarOrdenProvParcial.aspx.vb">
+      <DependentUpon>ArmarOrdenProvParcial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="basAdministracion.vb" />
+    <Compile Include="Calendar.aspx.vb">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CierreFacturasProvisorias.aspx.vb">
+      <DependentUpon>CierreFacturasProvisorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EgresoMovDeposito.aspx.vb">
+      <DependentUpon>EgresoMovDeposito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EgresoPlanillaSemanal.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EgresoPorDosificacion.aspx.vb">
+      <DependentUpon>EgresoPorDosificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EgresoPorDosificacionOtros.aspx.vb">
+      <DependentUpon>EgresoPorDosificacionOtros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EgresoPorPedidoCocina.aspx.vb">
+      <DependentUpon>EgresoPorPedidoCocina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EgresoPorValeConsumo.aspx.vb">
+      <DependentUpon>EgresoPorValeConsumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="elementos.aspx.vb">
+      <DependentUpon>elementos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General.vb" />
+    <Compile Include="getPersonas.aspx.vb">
+      <DependentUpon>getPersonas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoCategorias.aspx.vb">
+      <DependentUpon>IngresoCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoComprobantes.aspx.designer.vb">
+      <DependentUpon>IngresoComprobantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoComprobantes.aspx.vb">
+      <DependentUpon>IngresoComprobantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoConfPlanillas.aspx.vb">
+      <DependentUpon>IngresoConfPlanillas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoDifInventario.aspx.vb">
+      <DependentUpon>IngresoDifInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoElementos.aspx.vb">
+      <DependentUpon>IngresoElementos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoFacturasProvisorias.aspx.vb">
+      <DependentUpon>IngresoFacturasProvisorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoMenu.aspx.vb">
+      <DependentUpon>IngresoMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoMenuSemanal.aspx.vb">
+      <DependentUpon>IngresoMenuSemanal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoOCAbierta.aspx.vb">
+      <DependentUpon>IngresoOCAbierta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoOrdenPedido.aspx.vb">
+      <DependentUpon>IngresoOrdenPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoOrdenProvision.aspx.designer.vb">
+      <DependentUpon>IngresoOrdenProvision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoOrdenProvision.aspx.vb">
+      <DependentUpon>IngresoOrdenProvision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoPedidoDiario.aspx.vb">
+      <DependentUpon>IngresoPedidoDiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoPedidoProv.aspx.vb">
+      <DependentUpon>IngresoPedidoProv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoPlanillaSemanal.aspx.vb">
+      <DependentUpon>IngresoPlanillaSemanal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoProgOtros.aspx.vb">
+      <DependentUpon>IngresoProgOtros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoProveedores.aspx.vb">
+      <DependentUpon>IngresoProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoRemitos.aspx.vb">
+      <DependentUpon>IngresoRemitos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoRubros.aspx.vb">
+      <DependentUpon>IngresoRubros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoSectoresUsuarios.aspx.vb">
+      <DependentUpon>IngresoSectoresUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoSobrantes.aspx.vb">
+      <DependentUpon>IngresoSobrantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoSobrantes2.aspx.vb">
+      <DependentUpon>IngresoSobrantes2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoSubCategorias.aspx.vb">
+      <DependentUpon>IngresoSubCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoValeEntrega.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoValeRetiro.aspx.vb">
+      <DependentUpon>IngresoValeRetiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoVales.aspx.vb">
+      <DependentUpon>IngresoVales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoValesPre.aspx.vb">
+      <DependentUpon>IngresoValesPre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListAdmPlanillasSem.aspx.vb">
+      <DependentUpon>ListAdmPlanillasSem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoSobrantes.aspx.vb">
+      <DependentUpon>ListadoSobrantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadosVarios.aspx.vb">
+      <DependentUpon>ListadosVarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListComprobantes.aspx.vb">
+      <DependentUpon>ListComprobantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListConfPlanillas.aspx.designer.vb">
+      <DependentUpon>ListConfPlanillas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListConfPlanillas.aspx.vb">
+      <DependentUpon>ListConfPlanillas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListDifInventario.aspx.designer.vb">
+      <DependentUpon>ListDifInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListDifInventario.aspx.vb">
+      <DependentUpon>ListDifInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListEgresosPlanificados.aspx.designer.vb">
+      <DependentUpon>ListEgresosPlanificados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListEgresosPlanificados.aspx.vb">
+      <DependentUpon>ListEgresosPlanificados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListFacturasProvisorias.aspx.designer.vb">
+      <DependentUpon>ListFacturasProvisorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListFacturasProvisorias.aspx.vb">
+      <DependentUpon>ListFacturasProvisorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListMenues.aspx.designer.vb">
+      <DependentUpon>ListMenues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListMenues.aspx.vb">
+      <DependentUpon>ListMenues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListOrdenProv.aspx.vb">
+      <DependentUpon>ListOrdenProv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListOrdenProvision.aspx.designer.vb">
+      <DependentUpon>ListOrdenProvision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListOrdenProvision.aspx.vb">
+      <DependentUpon>ListOrdenProvision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListOrdenProvParcial.aspx.designer.vb">
+      <DependentUpon>ListOrdenProvParcial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListOrdenProvParcial.aspx.vb">
+      <DependentUpon>ListOrdenProvParcial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListPlanillasSemanales.aspx.designer.vb">
+      <DependentUpon>ListPlanillasSemanales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListPlanillasSemanales.aspx.vb">
+      <DependentUpon>ListPlanillasSemanales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListProgMenuSemanal.aspx.designer.vb">
+      <DependentUpon>ListProgMenuSemanal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListProgMenuSemanal.aspx.vb">
+      <DependentUpon>ListProgMenuSemanal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListProgOtrosPedidos.aspx.designer.vb">
+      <DependentUpon>ListProgOtrosPedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListProgOtrosPedidos.aspx.vb">
+      <DependentUpon>ListProgOtrosPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListRemitos.aspx.designer.vb">
+      <DependentUpon>ListRemitos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListRemitos.aspx.vb">
+      <DependentUpon>ListRemitos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListVales.aspx.designer.vb">
+      <DependentUpon>ListVales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListVales.aspx.vb">
+      <DependentUpon>ListVales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListValesEntregas.aspx.vb">
+      <DependentUpon>ListValesEntregas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListValesRetiros.aspx.designer.vb">
+      <DependentUpon>ListValesRetiros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListValesRetiros.aspx.vb">
+      <DependentUpon>ListValesRetiros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.ascx.vb">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.vb" />
+    <Compile Include="MenuAdmCategorias.aspx.vb">
+      <DependentUpon>MenuAdmCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuAdministracion.aspx.designer.vb">
+      <DependentUpon>MenuAdministracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdministracion.aspx.vb">
+      <DependentUpon>MenuAdministracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuAdmOC.aspx.vb">
+      <DependentUpon>MenuAdmOC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuDeposito.aspx.designer.vb">
+      <DependentUpon>MenuDeposito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDeposito.aspx.vb">
+      <DependentUpon>MenuDeposito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuEgresos.aspx.designer.vb">
+      <DependentUpon>MenuEgresos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuEgresos.aspx.vb">
+      <DependentUpon>MenuEgresos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuElementos.aspx.designer.vb">
+      <DependentUpon>MenuElementos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuElementos.aspx.vb">
+      <DependentUpon>MenuElementos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuIngresos.aspx.designer.vb">
+      <DependentUpon>MenuIngresos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuIngresos.aspx.vb">
+      <DependentUpon>MenuIngresos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.aspx.designer.vb">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.aspx.vb">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuProgConsumos.aspx.designer.vb">
+      <DependentUpon>MenuProgConsumos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuProgConsumos.aspx.vb">
+      <DependentUpon>MenuProgConsumos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarComprobantes.aspx.designer.vb">
+      <DependentUpon>MostrarComprobantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarComprobantes.aspx.vb">
+      <DependentUpon>MostrarComprobantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarDosificacion.aspx.designer.vb">
+      <DependentUpon>MostrarDosificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarDosificacion.aspx.vb">
+      <DependentUpon>MostrarDosificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarError.aspx.designer.vb">
+      <DependentUpon>MostrarError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarError.aspx.vb">
+      <DependentUpon>MostrarError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OpcionMenu.vb" />
+    <Compile Include="PopUpArticulos.aspx.vb">
+      <DependentUpon>PopUpArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUpStock.aspx.vb">
+      <DependentUpon>PopUpStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion.aspx.vb">
+      <DependentUpon>Presentacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Preserve.vb" />
+    <Compile Include="Rubros.aspx.vb">
+      <DependentUpon>Rubros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectElemento.ascx.designer.vb">
+      <DependentUpon>SelectElemento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectElemento.ascx.vb">
+      <DependentUpon>SelectElemento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Toolbar.ascx.designer.vb">
+      <DependentUpon>Toolbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar.ascx.vb">
+      <DependentUpon>Toolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopPage.ascx.designer.vb">
+      <DependentUpon>TopPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TopPage.ascx.vb">
+      <DependentUpon>TopPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerEntregasPorDosifMenu.aspx.vb">
+      <DependentUpon>VerEntregasPorDosifMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdmPlanillasSemanales.aspx.resx" />
+    <EmbeddedResource Include="ArmarOrdenProvParcial.aspx.resx" />
+    <EmbeddedResource Include="Calendar.aspx.resx" />
+    <EmbeddedResource Include="CierreFacturasProvisorias.aspx.resx" />
+    <EmbeddedResource Include="EgresoMovDeposito.aspx.resx" />
+    <EmbeddedResource Include="EgresoPlanillaSemanal.aspx.resx" />
+    <EmbeddedResource Include="EgresoPorDosificacion.aspx.resx" />
+    <EmbeddedResource Include="EgresoPorDosificacionOtros.aspx.resx" />
+    <EmbeddedResource Include="EgresoPorPedidoCocina.aspx.resx" />
+    <EmbeddedResource Include="EgresoPorValeConsumo.aspx.resx" />
+    <EmbeddedResource Include="elementos.aspx.resx" />
+    <EmbeddedResource Include="getPersonas.aspx.resx" />
+    <EmbeddedResource Include="Global.asax.resx" />
+    <EmbeddedResource Include="IngresoCategorias.aspx.resx" />
+    <EmbeddedResource Include="IngresoComprobantes.aspx.resx" />
+    <EmbeddedResource Include="IngresoConfPlanillas.aspx.resx" />
+    <EmbeddedResource Include="IngresoDifInventario.aspx.resx" />
+    <EmbeddedResource Include="IngresoElementos.aspx.resx" />
+    <EmbeddedResource Include="IngresoFacturasProvisorias.aspx.resx" />
+    <EmbeddedResource Include="IngresoMenu.aspx.resx" />
+    <EmbeddedResource Include="IngresoMenuSemanal.aspx.resx" />
+    <EmbeddedResource Include="IngresoOCAbierta.aspx.resx" />
+    <EmbeddedResource Include="IngresoOrdenPedido.aspx.resx" />
+    <EmbeddedResource Include="IngresoOrdenProvision.aspx.resx" />
+    <EmbeddedResource Include="IngresoPedidoDiario.aspx.resx" />
+    <EmbeddedResource Include="IngresoPedidoProv.aspx.resx" />
+    <EmbeddedResource Include="IngresoPlanillaSemanal.aspx.resx" />
+    <EmbeddedResource Include="IngresoProgOtros.aspx.resx" />
+    <EmbeddedResource Include="IngresoProveedores.aspx.resx" />
+    <EmbeddedResource Include="IngresoRemitos.aspx.resx" />
+    <EmbeddedResource Include="IngresoRubros.aspx.resx" />
+    <EmbeddedResource Include="IngresoSectoresUsuarios.aspx.resx" />
+    <EmbeddedResource Include="IngresoSobrantes.aspx.resx" />
+    <EmbeddedResource Include="IngresoSobrantes2.aspx.resx" />
+    <EmbeddedResource Include="IngresoSubCategorias.aspx.resx" />
+    <EmbeddedResource Include="IngresoValeEntrega.aspx.resx" />
+    <EmbeddedResource Include="IngresoValeRetiro.aspx.resx" />
+    <EmbeddedResource Include="IngresoVales.aspx.resx" />
+    <EmbeddedResource Include="IngresoValesPre.aspx.resx" />
+    <EmbeddedResource Include="ListAdmPlanillasSem.aspx.resx" />
+    <EmbeddedResource Include="ListadoSobrantes.aspx.resx" />
+    <EmbeddedResource Include="ListadosVarios.aspx.resx" />
+    <EmbeddedResource Include="ListComprobantes.aspx.resx" />
+    <EmbeddedResource Include="ListConfPlanillas.aspx.resx" />
+    <EmbeddedResource Include="ListDifInventario.aspx.resx" />
+    <EmbeddedResource Include="ListEgresosPlanificados.aspx.resx" />
+    <EmbeddedResource Include="ListFacturasProvisorias.aspx.resx" />
+    <EmbeddedResource Include="ListMenues.aspx.resx" />
+    <EmbeddedResource Include="ListOrdenProv.aspx.resx" />
+    <EmbeddedResource Include="ListOrdenProvision.aspx.resx" />
+    <EmbeddedResource Include="ListOrdenProvParcial.aspx.resx" />
+    <EmbeddedResource Include="ListPlanillasSemanales.aspx.resx" />
+    <EmbeddedResource Include="ListProgMenuSemanal.aspx.resx" />
+    <EmbeddedResource Include="ListProgOtrosPedidos.aspx.resx" />
+    <EmbeddedResource Include="ListRemitos.aspx.resx" />
+    <EmbeddedResource Include="ListVales.aspx.resx" />
+    <EmbeddedResource Include="ListValesEntregas.aspx.resx" />
+    <EmbeddedResource Include="ListValesRetiros.aspx.resx" />
+    <EmbeddedResource Include="Login.ascx.resx" />
+    <EmbeddedResource Include="Login.aspx.resx" />
+    <EmbeddedResource Include="MenuAdmCategorias.aspx.resx" />
+    <EmbeddedResource Include="MenuAdministracion.aspx.resx" />
+    <EmbeddedResource Include="MenuAdmOC.aspx.resx" />
+    <EmbeddedResource Include="MenuDeposito.aspx.resx" />
+    <EmbeddedResource Include="MenuEgresos.aspx.resx" />
+    <EmbeddedResource Include="MenuElementos.aspx.resx" />
+    <EmbeddedResource Include="MenuIngresos.aspx.resx" />
+    <EmbeddedResource Include="MenuPrincipal.aspx.resx" />
+    <EmbeddedResource Include="MenuProgConsumos.aspx.resx" />
+    <EmbeddedResource Include="MostrarComprobantes.aspx.resx" />
+    <EmbeddedResource Include="MostrarDosificacion.aspx.resx" />
+    <EmbeddedResource Include="MostrarError.aspx.resx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpArticulos.aspx.resx" />
+    <EmbeddedResource Include="PopUpStock.aspx.resx" />
+    <EmbeddedResource Include="Presentacion.aspx.resx" />
+    <EmbeddedResource Include="Rubros.aspx.resx" />
+    <EmbeddedResource Include="SelectElemento.ascx.resx" />
+    <EmbeddedResource Include="Toolbar.ascx.resx" />
+    <EmbeddedResource Include="TopPage.ascx.resx" />
+    <EmbeddedResource Include="VerEntregasPorDosifMenu.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56286</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56286/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

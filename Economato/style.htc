@@ -1,0 +1,76 @@
+<PUBLIC:PROPERTY NAME="datasrcFill" />
+<PUBLIC:PROPERTY NAME="dataFldFill" VALUE="*" />
+<PUBLIC:PROPERTY NAME="dataFldText" VALUE="1"/>
+<PUBLIC:PROPERTY NAME="dataFldValue" VALUE="0"/>
+<PUBLIC:METHOD   NAME="FillBox"	 />
+<PUBLIC:METHOD   NAME="checkState"	 />
+
+<SCRIPT LANGUAGE="jscript">
+
+
+	//Get the data source ID
+	var dataId=datasrcFill.substr(1);
+	var data=document.parentWindow.document.all[dataId];
+	//I look for a previously inserted script for this data source,
+	//this allows me to bind multiple SELECTs to the same XML tag
+	//Get all the scripts
+	var scrs=document.parentWindow.document.getElementsByTagName('SCRIPT');
+	var scr=null;
+	//If there's only one script tag
+	if(scrs.length==null){
+		if(scrs.htmlFor==dataId)
+			scr=scrs;
+	}
+	else{
+		//try to find the script for this data source
+		for(i=scrs.length-1; i>=0;i--)
+			if(scrs[i].htmlFor==dataId){
+				scr=scrs[i];
+				
+				break;
+			}
+	}
+	//if didn't find it, I create a new one
+	if(scr==null){
+		scr=document.createElement('SCRIPT');
+		scr.htmlFor=dataId;
+		scr.defer=true;
+		scr.event='onreadystatechange()';
+		scr.language='javascript';
+		insertAdjacentElement('beforeBegin', scr);
+	}
+	//append my script to refresh the SELECT when the data changes
+	//NOTE: I haven't checked if refreshes when you edit the XML from
+	//		the XMLDOM, I only used reloading it from the server.
+	scr.text+=';' + uniqueID + '.checkState();';
+	//Fill the select
+	if(document.parentWindow.document.all[datasrcFill.substr(1)].XMLDocument.xml!='')
+		FillBox();
+	else{
+		data.attachEvent('ondatasetcomplete', FillBox);
+	}
+	
+function checkState(){
+	innerHTML='';
+	if (document.parentWindow.document.all[datasrcFill.substr(1)].XMLDocument.xml!=''){
+		FillBox();
+		
+	}
+}
+
+function FillBox(){
+	element.innerHTML='';
+	var childs=document.parentWindow.document.all[datasrcFill.substr(1)].XMLDocument.documentElement.selectNodes('./' + dataFldFill);
+	var node=childs.nextNode();
+	while(node){
+		var op=element.document.createElement('OPTION');
+		op.value=node.getAttribute(dataFldValue);
+		op.text=node.getAttribute(dataFldText);
+		element.options.add(op);
+		node=childs.nextNode();
+	}
+	
+	element.dataSrc=element.dataSrc;
+}
+
+</SCRIPT>
